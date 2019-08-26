@@ -1,0 +1,9 @@
+#!/bin/bash
+# Run winetricks commands using conf file settings
+# Variables
+# See uor-wine.sh.conf
+scriptname=uor-wine.sh
+source $scriptname.conf
+
+#Run winetricks with commands
+winetricks "$@"
