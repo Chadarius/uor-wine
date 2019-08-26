@@ -22,12 +22,15 @@ echo UOR Wine directory is $HOME/$uordir
 echo Wine Prefix  is $WINEPREFIX
 echo Wine Architecture is $WINEARCH
 
-#Create the UOR Wine Prefix Directory
+#Create the UOR Wine Prefix Directory 
 if [ ! -d "$HOME/$uordir" ]; then
+	echo Create the UOR Wine Prefix Directory
 	mkdir $HOME/$uordir
 else
-	#Use this just for testing to have a clean directory each time	
-	rm -r $HOME/$uordir
+	#Use this just for testing to have a clean directory each time
+	echo Removing UOR Wine Prefix Directory for testing	
+	rm -rf $HOME/$uordir
+	echo Create the UOR Wine Prefix Directory
 	mkdir $HOME/$uordir
 fi
 
@@ -61,7 +64,7 @@ sudo cp winetricks.bash-completion /usr/share/bash-completion/completions/winetr
 # Setup wine directory at $HOME/$uorwineprefix
 wine wineboot
 #winetricks winecfg
-winetricks win7
+winetricks -q win7
 winetricks -q corefonts
 winetricks -q msxml3 -q
 winetricks -q vcrun2010 -q
@@ -76,13 +79,13 @@ winetricks dotnet30
 # Download UOR-Razor from http://www.uor-razor.com/ and unzip to "Razor" Directory
 # Copy the "c:\Program Files x86\UOAM" directory to "UOAM" directory
 if [ -d "Ultima Online" ];then
-	cp -a "Ultima Online" "$HOME/$uordir/c_drive/"
+	cp -a "Ultima Online" "$HOME/$uordir/drive_c/"
 fi
 
 if [ -d "UOAM" ];then
-	cp -a "UOAM" "$HOME/$uordir/c_drive/"
+	cp -a "UOAM" "$HOME/$uordir/drive_c/"
 fi
 
 if [ -d "Razor" ];then
-	cp -a "Razor" "$HOME/$uordir/c_drive/"
+	cp -a "Razor" "$HOME/$uordir/drive_c/"
 fi
