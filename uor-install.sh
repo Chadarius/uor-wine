@@ -66,12 +66,12 @@ wine wineboot
 #winetricks winecfg
 winetricks -q win7
 winetricks -q corefonts
-winetricks -q msxml3 -q
-winetricks -q vcrun2010 -q
-winetricks -q vcrun2013 -q
-winetricks -q gdiplus -q
+winetricks -q msxml3
+winetricks -q vcrun2010
+winetricks -q vcrun2013
+winetricks -q gdiplus
 winetricks -q dotnet48
-winetricks dotnet30
+winetricks -q dotnet30
 
 # Copy Directories to Wine instance if they exist
 # Copy previous installs to the uor-wine script directory

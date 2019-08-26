@@ -1,7 +1,9 @@
-./Razor/*
-./Ultima\ Online/
-./Ultima\ Online/*
-./UOAM/*
+/Razor
+/Razor/*
+/Ultima\ Online
+/Ultima\ Online/*
+/UOAM
+/UOAM/*
 ./winetricks
 ./winetricks.bash-completion
 
