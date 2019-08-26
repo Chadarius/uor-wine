@@ -70,6 +70,7 @@ winetricks -q msxml3
 winetricks -q vcrun2010
 winetricks -q vcrun2013
 winetricks -q gdiplus
+winetricks -q dotnet452
 winetricks -q dotnet48
 winetricks -q dotnet30
 
