@@ -2,7 +2,7 @@
 # Run winetricks commands using conf file settings
 # Variables
 # See uor-wine.sh.conf
-scriptname=uor-wine.sh
+scriptname=uor-install.sh
 source $scriptname.conf
 
 #Run winetricks with commands
