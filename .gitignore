@@ -6,6 +6,6 @@
 /UOAM/*
 ./winetricks
 ./winetricks.bash-completion
-
+.project
 
 

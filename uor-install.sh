@@ -28,10 +28,10 @@ if [ ! -d "$HOME/$uordir" ]; then
 	mkdir $HOME/$uordir
 else
 	#Use this just for testing to have a clean directory each time
-	echo Removing UOR Wine Prefix Directory for testing	
-	rm -rf $HOME/$uordir
-	echo Create the UOR Wine Prefix Directory
-	mkdir $HOME/$uordir
+	#echo Removing UOR Wine Prefix Directory for testing	
+	#rm -rf $HOME/$uordir
+	#echo Create the UOR Wine Prefix Directory
+	#mkdir $HOME/$uordir
 fi
 
 
