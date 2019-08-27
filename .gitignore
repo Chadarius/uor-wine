@@ -4,8 +4,9 @@
 /Ultima\ Online/*
 /UOAM
 /UOAM/*
-./winetricks
-./winetricks.bash-completion
+/winetricks
+/winetricks.bash-completion
 .project
+*.log
 
 
