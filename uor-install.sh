@@ -93,13 +93,13 @@ echo -e "${uor_icon}" | tee "$uordir/UO Renaissance.desktop
 # Download UOR-Razor from http://www.uor-razor.com/ and unzip to "Razor" Directory
 # Copy the "c:\Program Files x86\UOAM" directory to "UOAM" directory
 if [ -d "Ultima Online" ];then
-	#cp -a "Ultima Online" "$uordir/drive_c/"
-	ln -s "$uordir/Ultima Online" "$uordir/drive_c/Ultima Online"
+	cp -a "Ultima Online" "$uordir/drive_c/"
+	#ln -s "$uordir/Ultima Online" "$uordir/drive_c/Ultima Online"
 fi
 
 if [ -d "UOAM" ];then
-	#cp -a "UOAM" "$HOME/$uordir/drive_c/"
-	ln -s "$uordir/UOAM" $uordir/drive_c/UOAM"
+	cp -a "UOAM" "$HOME/$uordir/drive_c/"
+	#ln -s "$uordir/UOAM" $uordir/drive_c/UOAM"
 fi
 
 if [ -d "Razor" ];then
