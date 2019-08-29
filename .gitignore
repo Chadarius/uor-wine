@@ -6,7 +6,13 @@
 /UOAM/*
 /winetricks
 /winetricks.bash-completion
-.project
+/.project
 *.log
+/dosdevices
+/drive_c
+/system.reg
+/user.reg
+/userdef.reg
+*.desktop
 
 

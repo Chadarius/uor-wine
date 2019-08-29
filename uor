@@ -1,3 +1,11 @@
 #!/bin/bash
 # Run Razor in UOR Wine container
-./uorwine $HOME/uor/drive_c/Razor/Razor.exe &
+scriptname=`basename "$0"`
+source $scriptname.conf
+
+echo UOR Wine directory is $uordir
+echo Wine Prefix  is $WINEPREFIX
+echo Wine Architecture is $WINEARCH
+echo Wine Debug is $WINEDEBUG
+
+$uordir/uorwine $uordir/drive_c/Razor/Razor.exe &
