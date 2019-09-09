@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run Razor in UOR Wine container
 scriptname=`basename "$0"`
-source $scriptname.conf
+source uor-install.sh.conf
 
 echo UOR Wine directory is $uordir
 echo Wine Prefix  is $WINEPREFIX

@@ -85,7 +85,8 @@ EOF
 )
 
 echo -e "${uor_icon}" | tee "$uordir/UO Renaissance.desktop"
-	
+
+		
 # Copy Directories to Wine instance if they exist
 # Copy previous installs to the uor-wine script directory
 # Copy the c:\Ultima Online directory to the "Ultima Online" directory
@@ -105,24 +106,28 @@ else
 fi
 
 # Copy UOAM dir if exists otherwise move UOR Installed UOAM to root of drive_c
-if [ -d "$uordir/UOAM" ];then
-	cp -a "$uordir/UOAM" "$uordir/drive_c"
-else
-	if [ -d "$uodir/drive_c/Program Files/UOAM" ];then
-		mv "$uodir/drive_c/Program Files/UOAM"
+if [ ! -z $uoampath ];then
+	if [ -d "$uordir/UOAM" ];then
+		cp -a "$uordir/UOAM" "$uordir/drive_c"
+	else
+		if [ -d "$uodir/drive_c/Program Files/UOAM" ];then
+			mv "$uodir/drive_c/Program Files/UOAM"
+		fi
 	fi
 fi
 
 # Copy Razor dir if exists otherwise download and unzip to drive_c
-if [ -d "$uordir/Razor" ];then
-	cp -a "$uordir/Razor" "$uordir/drive_c"
-else
-	# Download UOR Razor
-	if [ ! -f "$uodir/Razor_UOR_CE-1.5.0.16.zip" ];then
-		wget "http://www.uor-razor.com/Razor_UOR_CE-1.5.0.16.zip"
+if [ ! -z $razorpath ];then
+	if [ -d "$uordir/Razor" ];then
+		cp -a "$uordir/Razor" "$uordir/drive_c"
+	else
+		# Download UOR Razor
+		if [ ! -f "$uodir/Razor_UOR_CE-1.5.0.16.zip" ];then
+			wget "http://www.uor-razor.com/Razor_UOR_CE-1.5.0.16.zip"
+		fi
+		# Unzip Razor to drive_c
+		if [ -f "$uodir/Razor_UOR_CE-1.5.0.16.zip" ];then
+			unzip Razor_UOR_CE-1.5.0.16.zip -d "$uordir/drive_c/Razor"
+		fi	
 	fi
-	# Unzip Razor to drive_c
-	if [ -f "$uodir/Razor_UOR_CE-1.5.0.16.zip" ];then
-		unzip Razor_UOR_CE-1.5.0.16.zip -d "$uordir/drive_c/Razor"
-	fi	
 fi

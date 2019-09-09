@@ -16,3 +16,6 @@
 *.desktop
 
 
+/.update-timestamp
+/*.zip
+/*.exe
