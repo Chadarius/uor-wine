@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run Razor in UOR Wine container
+# Run UOAM in UOR Wine container
 scriptname=`basename "$0"`
 source uor-install.sh.conf
 
@@ -8,4 +8,4 @@ echo Wine Prefix  is $WINEPREFIX
 echo Wine Architecture is $WINEARCH
 echo Wine Debug is $WINEDEBUG
 
-$uordir/uorwine "$razorpath/Razor.exe" &
+"$uordir/uorwine" "$uoampath/uoam_auto.exe" -q &
