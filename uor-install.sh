@@ -58,7 +58,7 @@ wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetri
 sudo cp winetricks.bash-completion /usr/share/bash-completion/completions/winetricks
 
 # Setup wine directory at $uordir
-wine wineboot
+wineboot
 winetricks -q win7
 winetricks -q corefonts
 winetricks -q msxml3
