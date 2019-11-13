@@ -68,6 +68,7 @@ winetricks -q gdiplus
 winetricks -q dotnet452
 winetricks -q dotnet48
 winetricks -q dotnet30
+winetricks windowmanagerdecorated=n
 
 # Create .desktop icon
 uor_icon=$(cat <<EOF
@@ -103,6 +104,7 @@ else
 	# Install UO Renaissance
 	if [ -f "$uodir/UO_Renaissance_Client_Full.exe" ];then
 		uorwine "$uodir/UO_Renaissance_Client_Full.exe" -q  
+	fi
 fi
 
 # Copy UOAM dir if exists otherwise move UOR Installed UOAM to root of drive_c
