@@ -14,7 +14,7 @@
 /user.reg
 /userdef.reg
 *.desktop
-
+/wine
 
 /.update-timestamp
 /*.zip
